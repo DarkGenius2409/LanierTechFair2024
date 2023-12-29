@@ -19,9 +19,11 @@
     }
   ],
   "hosting": {
-   "rewrites": [ {
-     "source": "**",
-     "function": "app"
-   } ]
- }
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "app"
+      }
+    ]
+  }
 }
