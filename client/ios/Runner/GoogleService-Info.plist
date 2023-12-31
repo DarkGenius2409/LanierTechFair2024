@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>664889898588-tedogr1koqqklkhj74up2lo1akeom3r6.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.664889898588-tedogr1koqqklkhj74up2lo1akeom3r6</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDXQSlPR1k8iP_TZV3gQPUfPOsat7BtWms</string>
+	<key>GCM_SENDER_ID</key>
+	<string>664889898588</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.client</string>
+	<key>PROJECT_ID</key>
+	<string>laniertech2024-d039e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>laniertech2024-d039e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:664889898588:ios:077d854f395915295e9899</string>
+</dict>
+</plist>
