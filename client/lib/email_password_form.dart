@@ -1,7 +1,6 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:client/main.dart';
-import 'package:client/signin_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -26,10 +25,9 @@ class EmailPasswordFormState extends State<EmailPasswordForm> {
   void passwordSignIn() async {
     if (_formKey.currentState!.validate()) {
       try {
-        final credential = await FirebaseAuth.instance
-            .signInWithEmailAndPassword(
-                email: widget.emailController.text,
-                password: widget.passwordController.text);
+        await FirebaseAuth.instance.signInWithEmailAndPassword(
+            email: widget.emailController.text,
+            password: widget.passwordController.text);
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => const MainPage()));
       } on FirebaseAuthException catch (e) {

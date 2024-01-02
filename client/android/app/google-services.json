@@ -29,6 +29,49 @@
             {
               "client_id": "664889898588-it5v7t0en69vd7dt14vpff46qvd7uvb8.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "664889898588-jgu2q7j55ghlmj0q42sqm060po5nrbkl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.client.RunnerTests"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:664889898588:android:a4808172c6dba2295e9899",
+        "android_client_info": {
+          "package_name": "com.fitsync.client"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "664889898588-it5v7t0en69vd7dt14vpff46qvd7uvb8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfZHtmhyqHYb4l29JdVZbmhDN9PzE0CyQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "664889898588-it5v7t0en69vd7dt14vpff46qvd7uvb8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "664889898588-jgu2q7j55ghlmj0q42sqm060po5nrbkl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.client.RunnerTests"
+              }
             }
           ]
         }

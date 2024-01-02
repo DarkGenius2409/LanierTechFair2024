@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -32,26 +30,38 @@ class TitleSection extends StatefulWidget {
 }
 
 class _TitleSectionState extends State<TitleSection> {
-  final title = "Welcome Back";
   final user = FirebaseAuth.instance.currentUser;
+  late String username;
 
   @override
   void initState() {
     super.initState();
+    username = user?.displayName ?? "";
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Center(
-            child: Text(
-          title,
-          style: const TextStyle(fontSize: 60),
-          textAlign: TextAlign.center,
-        ))
-      ],
+    final double paddingTop = MediaQuery.of(context).size.height * 0.05;
+    final double paddingX = MediaQuery.of(context).size.width * 0.1;
+    final double dividerIndent = MediaQuery.of(context).size.width * 0.15;
+
+    return Padding(
+      padding:
+          EdgeInsets.only(top: paddingTop, left: paddingX, right: paddingX),
+      child: Column(
+        children: [
+          const Center(
+              child: Text(
+            "Welcome",
+            style: TextStyle(fontSize: 60),
+          )),
+          Center(
+              child: Text(
+            username,
+            style: const TextStyle(fontSize: 40),
+          )),
+        ],
+      ),
     );
-    ;
   }
 }

@@ -1,9 +1,10 @@
-import 'package:client/account_page.dart';
+import 'package:client/settings_page.dart';
 import 'package:client/home_page.dart';
 import 'package:client/library_page.dart';
+import 'package:client/signin_page.dart';
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'new_page.dart';
 import 'search_page.dart';
-import 'signin_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
             labelLarge: GoogleFonts.raleway(),
             labelMedium: GoogleFonts.raleway(fontWeight: FontWeight.bold),
           )),
-      home: const SignInPage(),
+      home: const AuthGate(),
     );
   }
 }
@@ -65,6 +66,30 @@ class _MainPageState extends State<MainPage> {
             color: Colors.white,
           ),
         ),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.account_circle_outlined),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute<ProfileScreen>(
+                  builder: (context) => ProfileScreen(
+                    appBar: AppBar(
+                      title: const Text('User Profile'),
+                    ),
+                    actions: [
+                      SignedOutAction((context) {
+                        Navigator.of(context).pop();
+                      })
+                    ],
+                  ),
+                ),
+              );
+            },
+            tooltip: "Account Details",
+            color: Colors.white,
+          ),
+        ],
       ),
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: (int index) {
@@ -96,9 +121,9 @@ class _MainPageState extends State<MainPage> {
             label: 'Saved',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.account_circle_rounded),
-            icon: Icon(Icons.account_circle_outlined),
-            label: 'Account',
+            selectedIcon: Icon(Icons.settings_rounded),
+            icon: Icon(Icons.settings_outlined),
+            label: 'Settings',
           ),
         ],
       ),
@@ -108,7 +133,7 @@ class _MainPageState extends State<MainPage> {
         const SearchPage(),
         const NewPage(),
         const LibraryPage(),
-        const AccountPage()
+        const SettingsPage()
       ][currentPageIndex],
     );
   }
