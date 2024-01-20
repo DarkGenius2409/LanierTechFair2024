@@ -353,7 +353,7 @@ class _TitleSectionState extends State<TitleSection> {
                       ),
                       SizedBox(
                           height: screenSize.height * 0.7,
-                          width: screenSize.height * 0.85,
+                          width: screenSize.height * 0.95,
                           child: currentWorkout())
                     ],
                   ),
